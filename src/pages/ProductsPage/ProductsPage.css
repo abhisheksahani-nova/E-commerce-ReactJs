@@ -8,5 +8,10 @@
 
 .productlisting-products-container {
   width: 75%;
-  margin: 1rem 1.5rem 6rem;
+  margin: 1rem 0rem 6rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+  row-gap: 7rem;
 }

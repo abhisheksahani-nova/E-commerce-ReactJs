@@ -2,6 +2,7 @@ import React from "react";
 import { Navbar, ProductCard } from "../../components/index";
 import Filter from "./Filter/Filter";
 import "./ProductsPage.css";
+import { products } from "../../db/products";
 
 function ProductsPage() {
   return (
@@ -9,11 +10,12 @@ function ProductsPage() {
       <Navbar />
 
       <section className="productlisting-main-content-container d-flex p-relative">
-        {/* <!-- filter sidebar --> */}
         <Filter />
 
         <div className="productlisting-products-container">
-          <ProductCard />
+          {products.map((product) => {
+            return <ProductCard key={product.id} product={product} />;
+          })}
         </div>
       </section>
     </div>

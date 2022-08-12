@@ -1,7 +1,9 @@
 import React from "react";
 import "./ProductCard.css";
 
-function ProductCard() {
+function ProductCard({ product }) {
+  const { name, price, available, vendor, category } = product;
+
   return (
     <div className="card-basic card-custom-width cursor-p">
       <div className="badge-container">
@@ -14,16 +16,16 @@ function ProductCard() {
 
         <div className="p-small">
           <div className="d-flex justify-content-between card-title-container">
-            <h3 className="card-title pri-clr"> Oranges </h3>
+            <h3 className="card-title pri-clr"> {name} </h3>
             <div>
               <i className="fa-solid fa-star staricon-style"></i>
               <small className="sec_clr rating-num"> 5 </small>
             </div>
           </div>
 
-          <small className="card-subtitle sec-clr">Brand</small>
+          <small className="card-subtitle sec-clr">{category}</small>
 
-          <p className="product-price text-bold pri-clr">₹ 300</p>
+          <p className="product-price text-bold pri-clr">₹ {price}</p>
 
           <div className="card-footer-container">
             <button className="btn custom-btn">
