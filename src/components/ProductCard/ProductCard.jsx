@@ -2,16 +2,12 @@ import React from "react";
 import "./ProductCard.css";
 
 function ProductCard({ product }) {
-  const { name, price, available, vendor, category } = product;
+  const { name, price, available, vendor, category, img } = product;
 
   return (
     <div className="card-basic card-custom-width cursor-p">
       <div className="badge-container">
-        <img
-          className="card-img"
-          src="https://images.unsplash.com/photo-1557800636-894a64c1696f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8b3JhbmdlfGVufDB8fDB8fA%3D%3D&w=1000&q=80"
-          alt="product"
-        />
+        <img className="card-img" src={img} alt={name} />
         <span className="card-withBadge">New</span>
 
         <div className="p-small">
