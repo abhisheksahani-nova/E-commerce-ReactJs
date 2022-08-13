@@ -3,7 +3,7 @@ import "./ProductCard.css";
 import { useCart } from "../../context/cart-context";
 
 function ProductCard({ product }) {
-  const { name, price, category, img } = product;
+  const { name, price, category, img, vendor } = product;
 
   const { setCartProducts } = useCart();
 
@@ -14,15 +14,11 @@ function ProductCard({ product }) {
         <span className="card-withBadge">New</span>
 
         <div className="p-small">
-          <div className="d-flex justify-content-between card-title-container">
-            <h3 className="card-title pri-clr"> {name} </h3>
-            <div>
-              <i className="fa-solid fa-star staricon-style"></i>
-              <small className="sec-clr rating-num"> 5 </small>
-            </div>
-          </div>
+          <h3 className="card-title pri-clr"> {name} </h3>
 
-          <small className="card-subtitle sec-clr">{category}</small>
+          <small className="card-subtitle sec-clr">
+            {`${vendor} (${category})`}
+          </small>
 
           <p className="product-price text-bold pri-clr">₹ {price}</p>
 

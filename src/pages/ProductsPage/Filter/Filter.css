@@ -22,7 +22,7 @@
 }
 
 .filter-clear-btn {
-  background-color: var(--plant-pri-light-clr);
+  background-color: var(--plant-pri-clr);
   padding: 0.4rem 0.6rem;
   font-size: 0.8rem;
   outline: none;

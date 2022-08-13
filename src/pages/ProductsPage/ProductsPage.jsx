@@ -21,6 +21,11 @@ function ProductsPage() {
             }
           : { ...state, categories: [...state.categories, action.payload] };
 
+      case "CLEAR_FILTER":
+        return {
+          categories: [],
+        };
+
       default:
         return state;
     }

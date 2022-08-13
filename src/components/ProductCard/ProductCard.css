@@ -21,12 +21,14 @@
 }
 
 .card-title {
+  margin: 4px 0;
   letter-spacing: 0.025rem;
 }
 
 .card-subtitle {
-  letter-spacing: 0.03rem;
+  letter-spacing: 0.025rem;
   font-weight: 500;
+  font-size: 0.84rem;
 }
 
 .product-price {
@@ -38,10 +40,6 @@
 
 .p-small {
   padding: 0.5rem;
-}
-
-.card-title-container {
-  margin: 4px 0;
 }
 
 .card-footer-container {
