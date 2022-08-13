@@ -6,7 +6,7 @@ function CartPayment() {
   const { cartProducts } = useCart();
 
   const cartPrice = cartProducts.reduce(
-    (acc, product) => acc + product?.price * (product.qty ? product.qty : 1),
+    (acc, product) => acc + product.price * product.qty,
     0
   );
 

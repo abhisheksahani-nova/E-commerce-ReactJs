@@ -3,9 +3,20 @@ import "./ProductCard.css";
 import { useCart } from "../../context/cart-context";
 
 function ProductCard({ product }) {
-  const { name, price, category, img, vendor, available } = product;
+  const { name, price, category, img, vendor, available, id } = product;
 
-  const { setCartProducts } = useCart();
+  const { setCartProducts, cartProducts } = useCart();
+
+  function handleAddToCart() {
+    const isCartProduct = cartProducts.some((product) => product.id === id);
+
+    if (!isCartProduct) {
+      setCartProducts((cartProducts) => [
+        ...cartProducts,
+        { ...product, qty: 1 },
+      ]);
+    }
+  }
 
   return (
     <div className="card-basic card-custom-width cursor-p">
@@ -27,9 +38,7 @@ function ProductCard({ product }) {
           <div className="card-footer-container">
             <button
               className="btn custom-btn"
-              onClick={() =>
-                setCartProducts((cartProducts) => [...cartProducts, product])
-              }
+              onClick={() => handleAddToCart()}
             >
               <span className="icon">
                 <i className="fa fa-shopping-cart"></i>
