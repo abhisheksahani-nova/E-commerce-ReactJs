@@ -11,7 +11,7 @@ function CartProductCard({ product }) {
     setCartProducts((cartProducts) => {
       return cartProducts.map((product) =>
         product.id === id
-          ? { ...product, qty: product.qty <= 0 ? qty : product.qty - 1 }
+          ? { ...product, qty: product.qty <= 1 ? qty : product.qty - 1 }
           : product
       );
     });
