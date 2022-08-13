@@ -16,22 +16,26 @@ function Filter({ state, dispatch }) {
 
       <div className="mb-2">
         <h4 className="filter-subtitle">Category</h4>
-        <div className="filter-input-container">
+        <div
+          className="filter-input-container"
+          onClick={() =>
+            dispatch({ type: "FILTER_BY_CATEGORY", payload: "Vegetables" })
+          }
+        >
           <input
-            onClick={() =>
-              dispatch({ type: "FILTER_BY_CATEGORY", payload: "Vegetables" })
-            }
             type="checkbox"
             checked={state.categories.includes("Vegetables")}
           />
           <label className="ml-1 filter-input-label">Vegetables</label>
         </div>
 
-        <div className="filter-input-container">
+        <div
+          className="filter-input-container"
+          onClick={() =>
+            dispatch({ type: "FILTER_BY_CATEGORY", payload: "Fruits" })
+          }
+        >
           <input
-            onClick={() =>
-              dispatch({ type: "FILTER_BY_CATEGORY", payload: "Fruits" })
-            }
             type="checkbox"
             checked={state.categories.includes("Fruits")}
           />
