@@ -3,7 +3,7 @@ import "./ProductCard.css";
 import { useCart } from "../../context/cart-context";
 
 function ProductCard({ product }) {
-  const { name, price, category, img, vendor } = product;
+  const { name, price, category, img, vendor, available } = product;
 
   const { setCartProducts } = useCart();
 
@@ -11,7 +11,9 @@ function ProductCard({ product }) {
     <div className="card-basic card-custom-width cursor-p">
       <div className="badge-container">
         <img className="card-img" src={img} alt={name} />
-        <span className="card-withBadge">New</span>
+        <span className="card-withBadge badge-custom-bg">
+          {available ? "In Stock" : "Out Of Stock"}
+        </span>
 
         <div className="p-small">
           <h3 className="card-title pri-clr"> {name} </h3>
