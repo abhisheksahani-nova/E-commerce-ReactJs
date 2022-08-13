@@ -20,7 +20,6 @@ function CartProductCard({ product }) {
           <p className="card-description text-bold pri-clr">₹ {price}</p>
 
           <div className="d-flex cart-card-quantitycontainer">
-            <small className="sec-clr">Quantity :</small>
             <button className="btn cart-card-outlinebtn customstyle-btn pri-outline-btn">
               -
             </button>

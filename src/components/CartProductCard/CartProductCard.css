@@ -18,13 +18,14 @@
 }
 
 .cart-card-quantitycontainer {
-  align-items: center;
+  width: 6.5rem;
+  align-items: inherit;
+  justify-content: space-between;
   margin: 1rem 0 0 0.8rem;
 }
 
 .customstyle-btn {
   padding: 0.1rem 0.4rem;
-  margin: 0 0.5rem;
 }
 
 .cart-card-outlinebtn {

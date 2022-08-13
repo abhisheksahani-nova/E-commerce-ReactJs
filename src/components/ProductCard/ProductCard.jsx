@@ -18,7 +18,7 @@ function ProductCard({ product }) {
             <h3 className="card-title pri-clr"> {name} </h3>
             <div>
               <i className="fa-solid fa-star staricon-style"></i>
-              <small className="sec_clr rating-num"> 5 </small>
+              <small className="sec-clr rating-num"> 5 </small>
             </div>
           </div>
 

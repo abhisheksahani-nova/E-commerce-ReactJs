@@ -19,7 +19,7 @@
   margin: 1.5rem 1.5rem 3rem;
 }
 
-.cart_products_container {
+.cart-products-container {
   width: 70%;
   flex-direction: column;
   justify-content: center;

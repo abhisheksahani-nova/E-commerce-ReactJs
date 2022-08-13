@@ -1,0 +1,13 @@
+.cart-payment-receipt {
+  width: 30%;
+  height: fit-content;
+}
+
+.cart-pricedetails-section {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cart-pricedetails-section-gap {
+  padding: 1rem 1.6rem 1rem;
+}
