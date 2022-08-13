@@ -1,8 +1,11 @@
 import React from "react";
 import "./ProductCard.css";
+import { useCart } from "../../context/cart-context";
 
 function ProductCard({ product }) {
-  const { name, price, available, vendor, category, img } = product;
+  const { name, price, category, img } = product;
+
+  const { setCartProducts } = useCart();
 
   return (
     <div className="card-basic card-custom-width cursor-p">
@@ -24,7 +27,12 @@ function ProductCard({ product }) {
           <p className="product-price text-bold pri-clr">₹ {price}</p>
 
           <div className="card-footer-container">
-            <button className="btn custom-btn">
+            <button
+              className="btn custom-btn"
+              onClick={() =>
+                setCartProducts((cartProducts) => [...cartProducts, product])
+              }
+            >
               <span className="icon">
                 <i className="fa fa-shopping-cart"></i>
               </span>

@@ -10,7 +10,7 @@ export const products = [
 
     vendor: "Himachal Pvt Ltd",
 
-    category: "Vegtables",
+    category: "Vegetables",
 
     img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJ2J33IKlRKvQUHcblrUnBgI0_4MiKk4AHbQ&usqp=CAU",
   },
