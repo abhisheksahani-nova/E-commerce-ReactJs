@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { useCart } from "../../../context/cart-context";
 import "./CartPayment.css";
+import { PurchaseDialog } from "../../../components/index";
 
 function CartPayment() {
+  const [openPurchaseDialog, setOpenPurchaseDialog] = useState(false);
+
   const { cartProducts } = useCart();
 
   const cartPrice = cartProducts.reduce(
@@ -30,9 +33,14 @@ function CartPayment() {
         <h3>₹{cartPrice ? cartPrice : 0} </h3>
       </div>
 
+      {openPurchaseDialog && <PurchaseDialog setOpenPurchaseDialog={setOpenPurchaseDialog} />}
+
       <div className="cart-pricedetails-section-gap mb-1">
-        <button className="btn cta-btn cart-pricedetails-section-gap width-100p">
-          PLACE ORDER
+        <button
+          className="btn cta-btn cart-pricedetails-section-gap width-100p"
+          onClick={() => setOpenPurchaseDialog((prev) => !prev)}
+        >
+          BUY NOW
         </button>
       </div>
     </div>

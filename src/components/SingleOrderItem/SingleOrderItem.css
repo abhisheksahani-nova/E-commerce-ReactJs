@@ -1,0 +1,25 @@
+.gap-3 {
+  gap: 3rem;
+}
+
+.order-product-img {
+  width: 5rem;
+  height: 5rem;
+  object-fit: contain;
+}
+
+.mb-small {
+  margin-bottom: 6px;
+}
+
+.order-para-text {
+  font-size: 0.95rem;
+}
+
+.font-bold {
+  font-weight: 600;
+}
+
+.red-clr {
+  color: var(--red);
+}
