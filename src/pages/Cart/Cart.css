@@ -26,3 +26,15 @@
   align-items: center;
   gap: 2.5rem;
 }
+
+.empty-shoping-cart-icon {
+  font-size: 9rem;
+}
+
+.empty-shoping-cart-icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+}

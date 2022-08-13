@@ -5,7 +5,7 @@ function Filter({ state, dispatch }) {
   return (
     <div className="filter-main-container">
       <div className="d-flex filter-header-section">
-        <h2>Filters</h2>
+        <h3>Filters</h3>
         <button
           className="btn filter-clear-btn"
           onClick={() => dispatch({ type: "CLEAR_FILTER" })}
